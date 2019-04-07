@@ -32,6 +32,9 @@ bool is_blade_laptop(IOUSBDeviceInterface **usb_dev) {
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH:
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2016:
         case USB_DEVICE_ID_RAZER_BLADE_2018:
+        case USB_DEVICE_ID_RAZER_BLADE_2018_MERCURY:
+        case USB_DEVICE_ID_RAZER_BLADE_2019_ADV:
+        case USB_DEVICE_ID_RAZER_BLADE_2018_BASE:
         case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2016:
         case USB_DEVICE_ID_RAZER_BLADE_QHD:
             return true;
@@ -68,7 +71,19 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
         case USB_DEVICE_ID_RAZER_BLADE_2018:
             device_type = "Razer Blade 2018\n";
             break;
-        
+            
+        case USB_DEVICE_ID_RAZER_BLADE_2018_MERCURY:
+            device_type = "Razer Blade 2018 (Mercury)\n";
+            break;
+            
+        case USB_DEVICE_ID_RAZER_BLADE_2018_BASE:
+            device_type = "Razer Blade 2018 (Base)\n";
+            break;
+
+        case USB_DEVICE_ID_RAZER_BLADE_2019_ADV:
+            device_type = "Razer Blade 2019 (Advanced)\n";
+            break;
+            
         case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2016:
             device_type = "Razer Blade Pro (Late 2016)\n";
             break;
