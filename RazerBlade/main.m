@@ -56,7 +56,7 @@ int main(int argc, const char * argv[]) {
             }
             
             //Now create the device interface
-            result = (*plugInInterface)->QueryInterface(plugInInterface, CFUUIDGetUUIDBytes(kIOUSBDeviceInterfaceID), (LPVOID *)&dev);
+            result = (*plugInInterface)->QueryInterface(plugInInterface, CFUUIDGetUUIDBytes(kIOUSBDeviceInterfaceID650), (LPVOID *)&dev);
             
             //Don’t need the intermediate plug-in after device interface is created
             (*plugInInterface)->Release(plugInInterface);
