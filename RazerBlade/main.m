@@ -74,6 +74,7 @@ int main(int argc, const char * argv[]) {
             kr = (*dev)->GetDeviceReleaseNumber(dev, &release);
             
             if (!is_blade_laptop(dev)) {
+                
                 (void) (*dev)->Release(dev);
                 continue;
             }
@@ -87,7 +88,15 @@ int main(int argc, const char * argv[]) {
                 
             }
             
-            razer_attr_write_mode_breath(dev, "1", 1);
+            // Change Light Mode
+            //razer_attr_write_mode_starlight(dev, "1", 1);
+            char rgb[3];
+            rgb[0] = 1;
+            rgb[1] = 1;
+            rgb[2] = 1;
+            razer_attr_write_mode_static(dev, rgb, 3);
+
+
             
             //Close this device and release object
             kr = (*dev)->USBDeviceClose(dev);

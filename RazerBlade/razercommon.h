@@ -26,15 +26,16 @@
 #define ON  0x01
 
 // LED definitions
+#define ZERO_LED      0x00
 #define SCROLL_WHEEL_LED  0x01
 #define BATTERY_LED       0x03
 #define LOGO_LED          0x04
 #define BACKLIGHT_LED     0x05
 #define MACRO_LED         0x07
 #define GAME_LED          0x08
-#define RED_PROFILE_LED   0x0E
-#define GREEN_PROFILE_LED 0x0C
-#define BLUE_PROFILE_LED  0x0D
+#define RED_PROFILE_LED   0x0C
+#define GREEN_PROFILE_LED 0x0D
+#define BLUE_PROFILE_LED  0x0E
 
 // LED STORAGE Options
 #define NOSTORE          0x00

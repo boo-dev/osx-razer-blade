@@ -36,6 +36,10 @@
 #define USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2016 0x0210
 #endif
 
+#ifndef USB_DEVICE_ID_RAZER_BLADE_2018
+#define USB_DEVICE_ID_RAZER_BLADE_2018 0x0233
+#endif
+
 #ifndef USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2016
 #define USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2016 0x0220
 #endif
@@ -68,7 +72,7 @@ int razer_attr_write_mode_none(IOUSBDeviceInterface **usb_dev, const char *buf, 
 int razer_attr_write_mode_wave(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
 int razer_attr_write_mode_spectrum(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
 int razer_attr_write_mode_reactive(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
-int razer_attr_write_mode_reactive(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
+int razer_attr_write_mode_static(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
 int razer_attr_write_mode_starlight(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
 int razer_attr_write_mode_breath(IOUSBDeviceInterface **usb_dev, const char *buf, int count);
 int razer_attr_write_set_logo(IOUSBDeviceInterface **usb_dev, const char *buf, int count);

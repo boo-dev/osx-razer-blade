@@ -31,6 +31,7 @@ bool is_blade_laptop(IOUSBDeviceInterface **usb_dev) {
     switch (product) {
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH:
         case USB_DEVICE_ID_RAZER_BLADE_STEALTH_LATE_2016:
+        case USB_DEVICE_ID_RAZER_BLADE_2018:
         case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2016:
         case USB_DEVICE_ID_RAZER_BLADE_QHD:
             return true;
@@ -64,6 +65,10 @@ int razer_attr_read_device_type(IOUSBDeviceInterface **usb_dev, char *buf) {
             device_type = "Razer Blade Stealth (QHD)\n";
             break;
             
+        case USB_DEVICE_ID_RAZER_BLADE_2018:
+            device_type = "Razer Blade 2018\n";
+            break;
+        
         case USB_DEVICE_ID_RAZER_BLADE_PRO_LATE_2016:
             device_type = "Razer Blade Pro (Late 2016)\n";
             break;
