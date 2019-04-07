@@ -91,9 +91,9 @@ int main(int argc, const char * argv[]) {
             // Change Light Mode
             //razer_attr_write_mode_starlight(dev, "1", 1);
             char rgb[3];
-            rgb[0] = 1;
-            rgb[1] = 1;
-            rgb[2] = 1;
+            rgb[0] = 255; // Red: 0-255
+            rgb[1] = 255; // Green: 0-255
+            rgb[2] = 255; // Blue: 0-255
             razer_attr_write_mode_static(dev, rgb, 3);
 
 
